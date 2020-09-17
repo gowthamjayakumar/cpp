@@ -1,0 +1,41 @@
+#include<stdio.h>
+//code by gowtham @starkeecode.blogspot.com
+bool find(int a,int b)
+{
+	int temp,len=1,rem;
+	temp=b;
+		while(temp>0)
+		{
+			temp=temp/10;
+			len=len*10;
+		}
+		temp=a;
+		while(temp>0)
+		{
+			rem=temp%len;
+			temp=temp/10;
+			if(rem==b)
+			return 1;  
+		}
+	return 0;
+}
+int main()
+{
+	int a,b;
+	bool bol;
+	printf("Enter 'a' value: ");
+	scanf("%d",&a);
+	printf("Enter 'b' value: ");
+	scanf("%d",&b);
+	
+	if(b>a)
+	bol=find(b,a);
+	else
+	bol=find(a,b);
+	
+	if(bol)
+	printf("True");
+	else
+	printf("False");
+	return 0;
+}
