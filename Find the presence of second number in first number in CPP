@@ -1,6 +1,6 @@
 #include<stdio.h>
 //code by gowtham @starkeecode.blogspot.com
-bool find(int a,int b)
+int find(int a,int b)
 {
 	int temp,len=1,rem;
 	temp=b;
@@ -21,19 +21,18 @@ bool find(int a,int b)
 }
 int main()
 {
-	int a,b;
-	bool bol;
+	int a,b,result;
 	printf("Enter 'a' value: ");
 	scanf("%d",&a);
 	printf("Enter 'b' value: ");
 	scanf("%d",&b);
 	
 	if(b>a)
-	bol=find(b,a);
+	result=find(b,a);
 	else
-	bol=find(a,b);
+	result=find(a,b);
 	
-	if(bol)
+	if(result)
 	printf("True");
 	else
 	printf("False");
